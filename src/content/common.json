@@ -3,7 +3,7 @@
     "ip_input_placeholder": "8.8.8.8",
     "button_label": "Search",
     "shodan_api_pending": "Fetching data from Shodan",
-    "shodan_api_success": "Successfully fetched data fron Shodan",
+    "shodan_api_success": "Successfully fetched data from Shodan",
     "shodan_api_error": "Unable to fetch data from Shodan",
     "app_title": "Locate IP",
     "app_slogan": "Get the location of any ip!",

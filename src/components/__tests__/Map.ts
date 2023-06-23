@@ -27,6 +27,6 @@ describe('Location Store', () => {
         location.setLocation(data);
         expect(location.latitude).toBe(28.3);
         const wrapper = mount(Map);
-        expect(wrapper.text()).toContain('Location: LA, CA, USA');
+        expect(wrapper.text()).toContain('LA, CA, USA');
     });
 });

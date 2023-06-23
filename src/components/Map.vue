@@ -5,6 +5,7 @@ import { toast } from 'vue3-toastify';
 import { useLocationStore } from '@/stores/location';
 import { useIpStore } from '@/stores/ip';
 import { generateCoordinates } from '@/utils/helper';
+import { mapZoomLevel } from '@/config/constants';
 const location = useLocationStore();
 const ip = useIpStore();
 
@@ -20,7 +21,7 @@ const generateMap = async () => {
     };
     const mapOptions = {
         center: currPos,
-        zoom: 8,
+        zoom: mapZoomLevel,
     };
     const map = new google.maps.Map(mapDiv?.value, mapOptions);
     let marker = new google.maps.Marker({

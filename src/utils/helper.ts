@@ -6,15 +6,15 @@ export const isIpValid = (ip: string) => {
 
 export const generateCoordinates = (lat: number | null, lng: number | null) => {
     if (!lat || !lng) return '';
-    let latD = lat > 0 ? 'N' : 'S';
-    let lngD = lng > 0 ? 'E' : 'W';
+    const latD = lat > 0 ? 'N' : 'S';
+    const lngD = lng > 0 ? 'E' : 'W';
     lat = Math.abs(lat);
     lng = Math.abs(lng);
-    let latHour = Math.floor(lat);
-    let latMin = Math.floor((lat % 1) * 60);
-    let latSec = ((((lat % 1) * 60) % 1) * 60).toFixed(2);
-    let lngHour = Math.floor(lng);
-    let lngMin = Math.floor((lng % 1) * 60);
-    let lngSec = ((((lng % 1) * 60) % 1) * 60).toFixed(2);
+    const latHour = Math.floor(lat);
+    const latMin = Math.floor((lat % 1) * 60);
+    const latSec = ((((lat % 1) * 60) % 1) * 60).toFixed(2);
+    const lngHour = Math.floor(lng);
+    const lngMin = Math.floor((lng % 1) * 60);
+    const lngSec = ((((lng % 1) * 60) % 1) * 60).toFixed(2);
     return `${latHour}° ${latMin}' ${latSec}'' ${latD} ${lngHour}° ${lngMin}' ${lngSec}'' ${lngD}`;
 };
