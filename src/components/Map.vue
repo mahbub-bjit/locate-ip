@@ -4,6 +4,7 @@ import { Loader } from '@googlemaps/js-api-loader';
 import { toast } from 'vue3-toastify';
 import { useLocationStore } from '@/stores/location';
 import { useIpStore } from '@/stores/ip';
+import { generateCoordinates } from '@/utils/helper';
 const location = useLocationStore();
 const ip = useIpStore();
 
@@ -42,7 +43,12 @@ onMounted(async () => {
 </script>
 <template>
     <p class="text-cyan-700 text-base">
-        <b>Location:</b>{{ ` ${location.city}, ${location.region_code}, ${location.country_name}` }}
+        <b>Location:</b
+        >{{
+            ` ${generateCoordinates(location.latitude, location.longitude)}, ${location.city}, ${
+                location.region_code
+            }, ${location.country_name}`
+        }}
     </p>
     <div ref="mapDiv" id="map" class="mt-4 w-full h-[50vh]"></div>
 </template>
