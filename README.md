@@ -23,7 +23,7 @@ See [Vite Configuration Reference](https://vitejs.dev/config/).
 
 ## Clone
 
-Clone Locate Ip
+Clone the application
 
 ```bash
   git clone https://github.com/mahbub-bjit/locate-ip.git
@@ -34,13 +34,13 @@ Clone Locate Ip
 
 To run this project, you will need to add the following environment variables to your .env file
 
-`VITE_SODAN_BASE_URL`
+`VITE_SHODAN_BASE_URL`
 
-`VITE_SODAN_API_KEY`
+`VITE_SHODAN_API_KEY`
 
 `VITE_GOOGLE_MAP_API_KEY`
 
-Note : When run the project locally set `VITE_SODAN_BASE_URL` to empty to proxy the host.
+Note : When run the project locally set `VITE_SHODAN_BASE_URL` to empty to proxy the host.
 
 ## Project Setup
 
@@ -62,11 +62,12 @@ npm run build
 
 ### Run Unit Tests with [Vitest](https://vitest.dev/)
 
-````sh
+```sh
 npm run test:unit
+```
 
 ### Lint with [ESLint](https://eslint.org/)
 
 ```sh
 npm run lint
-````
+```
